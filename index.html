@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>EAGLE BEATS Portfolio</title>
 
   <!-- Bootstrap & AOS CDN -->
@@ -30,65 +30,81 @@
       background-color: var(--cream);
       color: var(--black);
       line-height: 1.6;
+      overflow-x: hidden;
     }
 
     .hero {
       background: #212121 center center/cover no-repeat;
-      padding: 140px 0;
+      padding: 80px 0;
       text-align: center;
       color: white;
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero .container {
+      padding: 0 15px;
     }
 
     .hero .logo {
-      font-size: 3rem;
+      font-size: 2.2rem;
       font-weight: 700;
       color: var(--light-gray);
-      letter-spacing: 2px;
+      letter-spacing: 1px;
       animation: fadeInDown 1.2s ease-in-out;
+      margin-bottom: 1rem;
     }
 
     .hero .tagline {
-      font-size: 1.2rem;
+      font-size: 1rem;
       margin: 1rem 0 2rem;
       animation: fadeInUp 1.2s ease-in-out;
+      padding: 0 10px;
     }
 
-    .hero .btn {
+    .btn {
       transition: all 0.3s ease;
       border-radius: 30px;
+      font-size: 0.9rem;
+      padding: 8px 20px;
     }
 
-    .hero .btn:hover {
+    .btn:hover {
       background-color: var(--accent);
       color: white;
       box-shadow: 0 0 10px var(--accent);
     }
 
     .section-title {
-      font-size: 2rem;
+      font-size: 1.5rem;
       font-weight: 600;
       color: var(--accent);
       text-align: center;
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
       position: relative;
     }
 
     .section-title::after {
       content: '';
       position: absolute;
-      width: 60px;
-      height: 4px;
+      width: 40px;
+      height: 3px;
       background-color: var(--accent);
-      bottom: -12px;
+      bottom: -8px;
       left: 50%;
       transform: translateX(-50%);
+    }
+
+    section {
+      padding: 2rem 0;
     }
 
     .list-group-item {
       background-color: #f8f9fa;
       border: none;
-      padding: 10px 16px;
-      font-size: 1rem;
+      padding: 8px 12px;
+      font-size: 0.9rem;
       color: #333;
       border-radius: 6px;
       margin-bottom: 6px;
@@ -107,64 +123,30 @@
     @keyframes fadeInUp {
       0% {opacity: 0; transform: translateY(30px);}
       100% {opacity: 1; transform: translateY(0);}
-    }.section-title {
-      font-size: 2rem;
-      font-weight: 600;
-      color: var(--accent);
-      text-align: center;
-      margin-bottom: 2rem;
-      position: relative;
-    }
-
-    .section-title::after {
-      content: '';
-      position: absolute;
-      width: 60px;
-      height: 4px;
-      background-color: var(--accent);
-      bottom: -12px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    .custom-video {
-      width: 100%;
-      max-width: 320px;
-      aspect-ratio: 9/16;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      cursor: pointer;
-    }
-    .video-16x9 {
-      width: 100%;
-      max-width: 640px;
-      aspect-ratio: 16/9;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      cursor: pointer;
     }
 
     .video-wrapper {
       display: flex;
       justify-content: center;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
+      padding: 0 10px;
     }
     
     /* YouTube embed responsive styling */
     .youtube-embed {
       width: 100%;
-      border-radius: 10px;
+      border-radius: 8px;
       overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
     
     .youtube-embed-9x16 {
-      max-width: 320px;
+      max-width: 100%;
       aspect-ratio: 9/16;
     }
     
     .youtube-embed-16x9 {
-      max-width: 640px;
+      max-width: 100%;
       aspect-ratio: 16/9;
     }
     
@@ -172,6 +154,90 @@
       width: 100%;
       height: 100%;
       border: none;
+    }
+
+    /* Software icons */
+    .software-icons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 15px 0;
+    }
+
+    .software-icons img {
+      width: 40px;
+      height: 40px;
+    }
+
+    /* Bio section */
+    #bio {
+      padding: 2rem 0;
+    }
+
+    #bio p {
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Footer */
+    .footer {
+      padding: 1.5rem 0;
+      font-size: 0.9rem;
+    }
+
+    .footer .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .footer .social-icons img {
+      width: 28px;
+      height: 28px;
+    }
+
+    /* Responsive adjustments */
+    @media (min-width: 768px) {
+      .hero {
+        padding: 120px 0;
+      }
+      
+      .hero .logo {
+        font-size: 3rem;
+      }
+      
+      .hero .tagline {
+        font-size: 1.2rem;
+      }
+      
+      .section-title {
+        font-size: 2rem;
+      }
+      
+      .btn {
+        font-size: 1rem;
+        padding: 10px 24px;
+      }
+    }
+
+    /* Fix for mobile viewport */
+    @media (max-width: 575.98px) {
+      .container {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+      
+      .row {
+        margin-left: -8px;
+        margin-right: -8px;
+      }
+      
+      [class*="col-"] {
+        padding-left: 8px;
+        padding-right: 8px;
+      }
     }
   </style>
 </head>
@@ -183,33 +249,33 @@
       <div>
         <div class="logo">EAGLE BEATS</div>
         <div class="tagline">Welcome To My Playground</div>
-       
+        <a href="https://wa.me/qr/RAM47RZC757WG1" class="btn btn-primary">Hire Me</a>
       </div>
     </div>
   </section>
 
   <!-- BIO SECTION -->
-  <section class="py-5 bg-white" id="bio">
+  <section class="bg-white" id="bio">
     <div class="container">
-      <div class="row align-items-start">
+      <div class="row">
         <!-- Left Column -->
-        <div class="col-md-6 mb-4" data-aos="fade-right">
-          <h4 class="fw-bold text-uppercase text-primary">Eagle_Beats</h4>
+        <div class="col-lg-6 mb-4" data-aos="fade-right">
+          <h4 class="fw-bold text-uppercase" style="color: var(--accent);">Eagle_Beats</h4>
           <p>Hello! I'm a Video Editor based in Nagpur, Maharashtra, India with over 4 years of freelance experience.</p>
           <p>I specialize in cinematic storytelling, promotional edits, wedding films, and YouTube content. My work combines creative direction with technical precision to deliver polished and impactful videos. Whether you're building a brand or capturing a memory, I can help bring your vision to life through the power of video.</p>
-          <a href="https://wa.me/qr/RAM47RZC757WG1" class="btn btn-primary rounded-pill px-4 shadow-sm mt-3">Hire Me</a>
+          <a href="https://wa.me/qr/RAM47RZC757WG1" class="btn btn-primary">Hire Me</a>
         </div>
 
         <!-- Right Column -->
-        <div class="col-md-6" data-aos="fade-left">
-          <h5 class="fw-bold text-secondary">Softwares</h5>
-          <div class="d-flex justify-content-center flex-wrap gap-3 my-3">
-            <img src="images/photoshop.png" alt="Photoshop" width="45" />
-            <img src="images/aftereffects.png" alt="After Effects" width="45" />
-            <img src="images/illustrator.png" alt="Illustrator" width="45" />
-            <img src="images/premierepro.png" alt="Premiere Pro" width="45" />
+        <div class="col-lg-6" data-aos="fade-left">
+          <h5 class="fw-bold" style="color: var(--medium-gray);">Softwares</h5>
+          <div class="software-icons">
+            <img src="images/photoshop.png" alt="Photoshop" />
+            <img src="images/aftereffects.png" alt="After Effects" />
+            <img src="images/illustrator.png" alt="Illustrator" />
+            <img src="images/premierepro.png" alt="Premiere Pro" />
           </div>
-          <h5 class="fw-bold text-secondary mb-3">Creative Skills</h5>
+          <h5 class="fw-bold mb-3" style="color: var(--medium-gray);">Creative Skills</h5>
           <ul class="list-group list-group-flush">
             <li class="list-group-item" data-aos="fade-up" data-aos-delay="100">Cinematic Video</li>
             <li class="list-group-item" data-aos="fade-up" data-aos-delay="200">Vlog</li>
@@ -222,29 +288,28 @@
       </div>
     </div>
   </section>
-<!-- SECTION: REEL (3 videos) -->
-  <section class="py-5 bg-light" id="reel">
-  <div class="container">
-    <h2 class="section-title" data-aos="fade-up">Reel</h2>
-    
-    <div class="row justify-content-center">
-      <div class="col-md-4 video-wrapper" data-aos="fade-right">
-        <div class="youtube-embed youtube-embed-9x16">
-          <!-- Reel 1 - Using embed URL format -->
-          <iframe src="https://www.youtube.com/embed/1Jbpjs2MeVo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-      </div>
+
+  <!-- SECTION: REEL (3 videos) -->
+  <section class="bg-light" id="reel">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Reel</h2>
       
-      <div class="col-md-4 video-wrapper" data-aos="fade-left">
-        <div class="youtube-embed youtube-embed-9x16">
-            <!-- Reel 2 -->
-            <iframe src="https://www.youtube.com/embed/lAeJzFtv5MY" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="row">
+        <div class="col-md-4 video-wrapper" data-aos="fade-up">
+          <div class="youtube-embed youtube-embed-9x16">
+            <iframe src="https://www.youtube.com/embed/1Jbpjs2MeVo" allowfullscreen></iframe>
           </div>
         </div>
-        <div class="col-md-4 video-wrapper" data-aos="fade-left">
+        
+        <div class="col-md-4 video-wrapper" data-aos="fade-up" data-aos-delay="100">
           <div class="youtube-embed youtube-embed-9x16">
-            <!-- Reel 3 -->
-            <iframe src="https://www.youtube.com/embed/8xVKu6chsE0?rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/8xVKu6chsE0?rel=0" allowfullscreen></iframe>
+          </div>
+        </div>
+        
+        <div class="col-md-4 video-wrapper" data-aos="fade-up" data-aos-delay="200">
+          <div class="youtube-embed youtube-embed-9x16">
+            <iframe src="https://www.youtube.com/embed/1r66--Gpfnc?rel=0" allowfullscreen></iframe>
           </div>
         </div>
       </div>
@@ -252,26 +317,25 @@
   </section>
 
   <!-- SECTION: SHORT (3 videos) -->
-  <section class="py-5 bg-white" id="short">
+  <section class="bg-white" id="short">
     <div class="container">
       <h2 class="section-title" data-aos="fade-up">Short</h2>
-      <div class="row justify-content-center">
-        <div class="col-md-4 video-wrapper" data-aos="fade-right">
+      <div class="row">
+        <div class="col-md-4 video-wrapper" data-aos="fade-up">
           <div class="youtube-embed youtube-embed-9x16">
-            <!-- Short 1 -->
-            <iframe src="https://www.youtube.com/embed/1r66--Gpfnc?rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/ppbjQGZZ3_I?rel=0" allowfullscreen></iframe>
           </div>
         </div>
-        <div class="col-md-4 video-wrapper" data-aos="fade-left">
+        
+        <div class="col-md-4 video-wrapper" data-aos="fade-up" data-aos-delay="100">
           <div class="youtube-embed youtube-embed-9x16">
-            <!-- Short 2 -->
-            <iframe src="https://www.youtube.com/embed/lOR0JYtSoKE" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/dVYnbt1IPik?rel=0" allowfullscreen></iframe>
           </div>
         </div>
-        <div class="col-md-4 video-wrapper" data-aos="fade-left">
+        
+        <div class="col-md-4 video-wrapper" data-aos="fade-up" data-aos-delay="200">
           <div class="youtube-embed youtube-embed-9x16">
-            <!-- Short 3 -->
-            <iframe src="https://www.youtube.com/embed/ppbjQGZZ3_I?rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/svlgUKLgH_o" allowfullscreen></iframe>
           </div>
         </div>
       </div>
@@ -279,120 +343,96 @@
   </section>
 
   <!-- SECTION: YOUTUBE (2 videos) -->
-<section class="py-5 bg-light" id="youtube">
-  <div class="container">
-    <h2 class="section-title" data-aos="fade-up">YouTube</h2>
-    <div class="row justify-content-center">
-      <div class="col-md-6 video-wrapper" data-aos="fade-right">
-        <div class="youtube-embed youtube-embed-16x9">
-          <!-- YouTube 1 - Replace with your actual video ID -->
-          <iframe src="https://www.youtube.com/embed/ZlUxq5gKgH4?si=6DCm41MwIzcwDd14" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <section class="bg-light" id="youtube">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">YouTube</h2>
+      <div class="row">
+        <div class="col-md-6 video-wrapper" data-aos="fade-up">
+          <div class="youtube-embed youtube-embed-16x9">
+            <iframe src="https://www.youtube.com/embed/ZlUxq5gKgH4" allowfullscreen></iframe>
+          </div>
+        </div>
+        
+        <div class="col-md-6 video-wrapper" data-aos="fade-up" data-aos-delay="100">
+          <div class="youtube-embed youtube-embed-16x9">
+            <iframe src="https://www.youtube.com/embed/PW7V5IHNicc" allowfullscreen></iframe>
+          </div>
         </div>
       </div>
-      <div class="col-md-6 video-wrapper" data-aos="fade-left">
-        <div class="youtube-embed youtube-embed-16x9">
-          <!-- YouTube 2 - Replace with your actual video ID -->
-          <iframe src="https://www.youtube.com/embed/PW7V5IHNicc?si=JTox46agA3GLvTGf" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      
+      <div class="row">
+        <div class="col-md-6 video-wrapper" data-aos="fade-up">
+          <div class="youtube-embed youtube-embed-16x9">
+            <iframe src="https://www.youtube.com/embed/ShBYf22y8uY" allowfullscreen></iframe>
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="row justify-content-center">
-      <div class="col-md-6 video-wrapper" data-aos="fade-right">
-        <div class="youtube-embed youtube-embed-16x9">
-          <!-- YouTube 1 - Replace with your actual video ID -->
-          <iframe src="https://www.youtube.com/embed/ShBYf22y8uY?si=yCBFDxdzLVWav2e4" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-      </div>
-      <div class="col-md-6 video-wrapper" data-aos="fade-left">
-        <div class="youtube-embed youtube-embed-16x9">
-          <!-- YouTube 2 - Replace with your actual video ID -->
-          <iframe src="https://www.youtube.com/embed/4lA4Mm3NtQU?si=k2kLxCLFjGF3RiGB" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- SECTION: INVITATION (2 videos) -->
-<section class="py-5 bg-white" id="invitation">
-  <div class="container">
-    <h2 class="section-title" data-aos="fade-up">Invitation</h2>
-    <div class="row justify-content-center">
-      <!-- Invitation1 as 16:9 -->
-      <div class="col-md-6 video-wrapper" data-aos="fade-up">
-        <div class="youtube-embed youtube-embed-16x9">
-          <!-- Invitation 1 - Replace with your actual video ID -->
-          <iframe src="https://www.youtube.com/embed/svlgUKLgH_o?si=VG21GahvXCojSZXh" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-      </div>
-
-      <!-- Invitation2 as 9:16 -->
-      <div class="col-md-4 video-wrapper" data-aos="fade-up" data-aos-delay="100">
-        <div class="youtube-embed youtube-embed-9x16">
-          <!-- Invitation 2 -->
-          <iframe src="https://www.youtube.com/embed/dVYnbt1IPik?rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        
+        <div class="col-md-6 video-wrapper" data-aos="fade-up" data-aos-delay="100">
+          <div class="youtube-embed youtube-embed-16x9">
+            <iframe src="https://www.youtube.com/embed/4lA4Mm3NtQU" allowfullscreen></iframe>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-
-  <!-- SECTION: CEREMONY (1 video) -->
-<section class="py-5 bg-light" id="ceremony">
-  <div class="container">
-    <h2 class="section-title" data-aos="fade-up">Ceremony</h2>
-    <div class="row justify-content-center">
-      <div class="col-md-6 video-wrapper" data-aos="fade-up">
-        <div class="youtube-embed youtube-embed-16x9">
-          <!-- Ceremony - Replace with your actual video ID -->
-          <iframe src="https://www.youtube.com/embed/PXBEutBohAE?si=3csFLX1HHcqwbjrc"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <!-- SECTION: INVITATION (2 videos) -->
+  <section class="bg-white" id="invitation">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Invitation</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-8 video-wrapper" data-aos="fade-up">
+          <div class="youtube-embed youtube-embed-16x9">
+            <iframe src="https://www.youtube.com/embed/PXBEutBohAE" allowfullscreen></iframe>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-
+  </section>
 
   <!-- FOOTER -->
-  <footer class="footer bg-dark text-white py-4">
-    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
-      <div>
-        <h5>Quick Links</h5>
-        <ul class="list-unstyled d-flex gap-3 mb-0">
-          <li><a href="#home" class="text-white text-decoration-none">Home</a></li>
-          <li><a href="#bio" class="text-white text-decoration-none">About</a></li>
-        </ul>
-      </div>
-      <div class="text-center text-md-end">
-        <p class="mb-1">Email: Eagle_Beats@gmail.com</p>
-        <p class="mb-1">Managed By: Eagle_Beats</p>
-        <div class="d-flex justify-content-center justify-content-md-end gap-3">
-          <a href="https://www.instagram.com/eagle_beats_visual" target="_blank">
-            <img src="images/instagram.png" alt="Instagram" width="32" />
-          </a>
-          <a href="https://www.youtube.com/@GrooveMarathiOfficial" target="_blank">
-            <img src="images/youtube.png" alt="YouTube" width="32" />
-          </a>
-          <a href="https://t.me/groovemarathi" target="_blank">
-            <img src="images/telegram.png" alt="Telegram" width="32" />
-          </a>
+  <footer class="footer bg-dark text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled d-flex justify-content-center justify-content-md-start gap-3 mb-0">
+            <li><a href="#home" class="text-white text-decoration-none">Home</a></li>
+            <li><a href="#bio" class="text-white text-decoration-none">About</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-md-6 text-center text-md-end">
+          <p class="mb-1">Email: Eagle_Beats@gmail.com</p>
+          <p class="mb-1">Managed By: Eagle_Beats</p>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/eagle_beats_visual" target="_blank">
+              <img src="images/instagram.png" alt="Instagram" />
+            </a>
+            <a href="https://www.youtube.com/@GrooveMarathiOfficial" target="_blank">
+              <img src="images/youtube.png" alt="YouTube" />
+            </a>
+            <a href="https://t.me/groovemarathi" target="_blank">
+              <img src="images/telegram.png" alt="Telegram" />
+            </a>
+          </div>
         </div>
       </div>
+      
+      <div class="text-center mt-3 pt-2 border-top border-secondary">
+        &copy; 2025 Eagle_Beats. All Rights Reserved.
+      </div>
     </div>
-    <div class="text-center mt-3">&copy; 2025 Eagle_Beats. All Rights Reserved.</div>
   </footer>
 
   <!-- AOS Script -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init({
-      duration: 1000,
-      offset: 100,
+      duration: 800,
+      offset: 80,
       once: true
     });
   </script>
 </body>
 </html>
-
