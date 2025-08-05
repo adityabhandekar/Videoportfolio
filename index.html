@@ -136,18 +136,42 @@
       cursor: pointer;
     }
     .video-16x9 {
-  width: 100%;
-  max-width: 640px;
-  aspect-ratio: 16/9;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-}
+      width: 100%;
+      max-width: 640px;
+      aspect-ratio: 16/9;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+    }
 
     .video-wrapper {
       display: flex;
       justify-content: center;
       margin-bottom: 30px;
+    }
+    
+    /* YouTube embed responsive styling */
+    .youtube-embed {
+      width: 100%;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    
+    .youtube-embed-9x16 {
+      max-width: 320px;
+      aspect-ratio: 9/16;
+    }
+    
+    .youtube-embed-16x9 {
+      max-width: 640px;
+      aspect-ratio: 16/9;
+    }
+    
+    .youtube-embed iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
     }
   </style>
 </head>
@@ -200,42 +224,55 @@
   </section>
 <!-- SECTION: REEL (3 videos) -->
   <section class="py-5 bg-light" id="reel">
-    <div class="container">
-      <h2 class="section-title" data-aos="fade-up">Reel</h2>
-      <div class="row justify-content-center">
-        <div class="col-md-4 video-wrapper" data-aos="fade-up">
-          <video class="custom-video" controls onclick="playOnlyThis(this)">
-            <source src="videos/reel1.mp4" type="video/mp4" />
-          </video>
+  <div class="container">
+    <h2 class="section-title" data-aos="fade-up">Reel</h2>
+    
+    <div class="row justify-content-center">
+      <div class="col-md-4 video-wrapper" data-aos="fade-right">
+        <div class="youtube-embed youtube-embed-9x16">
+          <!-- Reel 1 - Using embed URL format -->
+          <iframe src="https://www.youtube.com/embed/1Jbpjs2MeVo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+      </div>
+      
+      <div class="col-md-4 video-wrapper" data-aos="fade-left">
+        <div class="youtube-embed youtube-embed-9x16">
+            <!-- Reel 2 -->
+            <iframe src="https://www.youtube.com/embed/lAeJzFtv5MY" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
         </div>
-        <div class="col-md-4 video-wrapper" data-aos="fade-up" data-aos-delay="100">
-          <video class="custom-video" controls onclick="playOnlyThis(this)">
-            <source src="videos/reel2.mp4" type="video/mp4" />
-          </video>
-        </div>
-        <div class="col-md-4 video-wrapper" data-aos="fade-up" data-aos-delay="200">
-          <video class="custom-video" controls onclick="playOnlyThis(this)">
-            <source src="videos/reel3.mp4" type="video/mp4" />
-          </video>
+        <div class="col-md-4 video-wrapper" data-aos="fade-left">
+          <div class="youtube-embed youtube-embed-9x16">
+            <!-- Reel 3 -->
+            <iframe src="https://www.youtube.com/embed/8xVKu6chsE0?rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION: SHORT (2 videos) -->
+  <!-- SECTION: SHORT (3 videos) -->
   <section class="py-5 bg-white" id="short">
     <div class="container">
       <h2 class="section-title" data-aos="fade-up">Short</h2>
       <div class="row justify-content-center">
         <div class="col-md-4 video-wrapper" data-aos="fade-right">
-          <video class="custom-video" controls onclick="playOnlyThis(this)">
-            <source src="videos/short1.mp4" type="video/mp4" />
-          </video>
+          <div class="youtube-embed youtube-embed-9x16">
+            <!-- Short 1 -->
+            <iframe src="https://www.youtube.com/embed/ppbjQGZZ3_I?rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
         </div>
         <div class="col-md-4 video-wrapper" data-aos="fade-left">
-          <video class="custom-video" controls onclick="playOnlyThis(this)">
-            <source src="videos/short2.mp4" type="video/mp4" />
-          </video>
+          <div class="youtube-embed youtube-embed-9x16">
+            <!-- Short 2 -->
+            <iframe src="https://www.youtube.com/embed/lOR0JYtSoKE" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="col-md-4 video-wrapper" data-aos="fade-left">
+          <div class="youtube-embed youtube-embed-9x16">
+            <!-- Short 3 -->
+            <iframe src="https://www.youtube.com/embed/1r66--Gpfnc?rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
         </div>
       </div>
     </div>
@@ -247,14 +284,30 @@
     <h2 class="section-title" data-aos="fade-up">YouTube</h2>
     <div class="row justify-content-center">
       <div class="col-md-6 video-wrapper" data-aos="fade-right">
-        <video class="video-16x9" controls onclick="playOnlyThis(this)">
-          <source src="videos/youtube1.mp4" type="video/mp4" />
-        </video>
+        <div class="youtube-embed youtube-embed-16x9">
+          <!-- YouTube 1 - Replace with your actual video ID -->
+          <iframe src="https://www.youtube.com/embed/ZlUxq5gKgH4?si=6DCm41MwIzcwDd14" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
       </div>
       <div class="col-md-6 video-wrapper" data-aos="fade-left">
-        <video class="video-16x9" controls onclick="playOnlyThis(this)">
-          <source src="videos/youtube2.mp4" type="video/mp4" />
-        </video>
+        <div class="youtube-embed youtube-embed-16x9">
+          <!-- YouTube 2 - Replace with your actual video ID -->
+          <iframe src="https://www.youtube.com/embed/PW7V5IHNicc?si=JTox46agA3GLvTGf" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-6 video-wrapper" data-aos="fade-right">
+        <div class="youtube-embed youtube-embed-16x9">
+          <!-- YouTube 1 - Replace with your actual video ID -->
+          <iframe src="https://www.youtube.com/embed/ShBYf22y8uY?si=yCBFDxdzLVWav2e4" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="col-md-6 video-wrapper" data-aos="fade-left">
+        <div class="youtube-embed youtube-embed-16x9">
+          <!-- YouTube 2 - Replace with your actual video ID -->
+          <iframe src="https://www.youtube.com/embed/4lA4Mm3NtQU?si=k2kLxCLFjGF3RiGB" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
       </div>
     </div>
   </div>
@@ -268,16 +321,18 @@
     <div class="row justify-content-center">
       <!-- Invitation1 as 16:9 -->
       <div class="col-md-6 video-wrapper" data-aos="fade-up">
-        <video class="video-16x9" controls onclick="playOnlyThis(this)">
-          <source src="videos/invitation1.mp4" type="video/mp4" />
-        </video>
+        <div class="youtube-embed youtube-embed-16x9">
+          <!-- Invitation 1 - Replace with your actual video ID -->
+          <iframe src="https://www.youtube.com/embed/svlgUKLgH_o?si=VG21GahvXCojSZXh" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
       </div>
 
       <!-- Invitation2 as 9:16 -->
       <div class="col-md-4 video-wrapper" data-aos="fade-up" data-aos-delay="100">
-        <video class="custom-video" controls onclick="playOnlyThis(this)">
-          <source src="videos/invitation2.mp4" type="video/mp4" />
-        </video>
+        <div class="youtube-embed youtube-embed-9x16">
+          <!-- Invitation 2 -->
+          <iframe src="https://www.youtube.com/embed/dVYnbt1IPik?rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
       </div>
     </div>
   </div>
@@ -290,9 +345,10 @@
     <h2 class="section-title" data-aos="fade-up">Ceremony</h2>
     <div class="row justify-content-center">
       <div class="col-md-6 video-wrapper" data-aos="fade-up">
-        <video class="video-16x9" controls onclick="playOnlyThis(this)">
-          <source src="videos/ceremony1.mp4" type="video/mp4" />
-        </video>
+        <div class="youtube-embed youtube-embed-16x9">
+          <!-- Ceremony - Replace with your actual video ID -->
+          <iframe src="https://www.youtube.com/embed/PXBEutBohAE?si=3csFLX1HHcqwbjrc"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
       </div>
     </div>
   </div>
